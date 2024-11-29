@@ -2785,15 +2785,15 @@
 			session.stunServers = [{ urls: ["stun:stun.l.google.com:19302", "stun:stun.cloudflare.com:3478"]}]; // google + cloudflare stun servers. default
 			
 			///////////////  ------  Custom basic TURN SETUP SECTION STARTS Here --------
-			// session.configuration = {         // uncomment to disable the default usage of the vdo.ninja turn servers.
-			//	iceServers: session.stunServers,
-			//	sdpSemantics: session.sdpSemantics
-			// };
-			// var turn = {}; // Just an example entry for a basic TURN server 
-			// turn.username = "steve";
-			// turn.credential = "justtesting";
-			// turn.urls = ["turn:turn.obs.ninja:443"]; 
-			// session.configuration.iceServers.push(turn);
+			session.configuration = {         // uncomment to disable the default usage of the vdo.ninja turn servers.
+				iceServers: session.stunServers,
+				sdpSemantics: session.sdpSemantics
+			};
+			var turn = {}; // Just an example entry for a basic TURN server 
+			turn.username = "enbee";
+			turn.credential = "@U2qz^gZ!ZBeq#r$8F7cw$Ru";
+			turn.urls = ["turn:coolworld.cc:3478"]; 
+			session.configuration.iceServers.push(turn);
 			//
 			// turn = {}; // second turn server example entry. 
 			// turn.username = "steve";
@@ -2847,8 +2847,8 @@
 			// session.wss = "wss://wss.vdo.ninja:443"; // US-East (Default)
 
 			//  If wanting to fully-self-host, uncomment the following and deploy your own websocket server; good for air-gapped deployments
-			// session.wss = "wss://wss.yourdomainhere.com:443"; // https://github.com/steveseguin/websocket_server 
-			// session.customWSS = true;
+			session.wss = "wss://test.video-streaming.eu:443"; // https://github.com/steveseguin/websocket_server 
+			session.customWSS = true;
 			//////
 			
 			///// The following lets you set the defaults
