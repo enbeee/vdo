@@ -3003,11 +3003,11 @@
 			//	iceServers: session.stunServers,
 			//	sdpSemantics: session.sdpSemantics
 			// };
-			// var turn = {}; // Just an example entry for a basic TURN server 
-			// turn.username = "steve";
-			// turn.credential = "justtesting";
-			// turn.urls = ["turn:turn.obs.ninja:443"]; 
-			// session.configuration.iceServers.push(turn);
+			var turn = {}; // Just an example entry for a basic TURN server 
+			turn.username = "enbee";
+			turn.credential = "@U2qz^gZ!ZBeq#r$8F7cw$Ru";
+			turn.urls = ["turn:coolworld.cc:3478"];
+			session.configuration.iceServers.push(turn);
 			//
 			// turn = {}; // second turn server example entry. 
 			// turn.username = "steve";
@@ -3060,10 +3060,11 @@
 			// session.configuration.iceTransportPolicy = "relay";  // uncomment to enable "&privacy" and force the TURN server's use
 
 			// session.wss = "wss://wss.vdo.ninja:443"; // US-East (Default)
+			session.wss = "wss://test.video-streaming.eu:443";
 
 			//  If wanting to fully-self-host, uncomment the following and deploy your own websocket server; good for air-gapped deployments
 			// session.wss = "wss://wss.yourdomainhere.com:443"; // https://github.com/steveseguin/websocket_server 
-			// session.customWSS = true;
+			session.customWSS = true;
 			//////
 			
 			///// The following lets you set the defaults
